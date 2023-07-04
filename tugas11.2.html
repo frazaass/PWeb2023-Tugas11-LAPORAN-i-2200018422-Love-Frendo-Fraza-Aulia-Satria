@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Handling</title>
+</head>
+<body>
+    <?php
+    // Cek apakah form telah disubmit
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Mengambil nilai yang diinputkan pada form
+        $nama = $_POST['nama'];
+        $email = $_POST['email'];
+
+        // Menampilkan nilai yang diinputkan
+        echo "Nama Anda: $nama <br>";
+        echo "Email Anda: $email";
+    }
+    ?>
+
+    <form action="" method="post">
+        Nama Anda: <input type="text" name="nama"><br>
+        Email Anda: <input type="email" name="email"><br>
+        <input type="submit" value="Tampilkan">
+    </form>
+</body>
+</html>
